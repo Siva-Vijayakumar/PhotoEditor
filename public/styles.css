@@ -1,0 +1,198 @@
+/* public/styles.css */
+
+/* Reset and base styles */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background-color: #f7f9fc;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  background-image: url("https://cdn.pixabay.com/photo/2018/01/29/13/03/internet-3116062_1280.jpg");
+}
+
+.container {
+  /* background: white; */
+  background-color: #f7f8f6;
+  background-image: url("https://www.transparenttextures.com/patterns/diamond-upholstery.png");
+  /* This is mostly intended for prototyping; please download the pattern and re-host for production environments. Thank you! */
+  padding: 20px;
+  border-radius: 15px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+  width: 90%;
+  max-width: 1200px;
+  text-align: center;
+  position: relative; /* Position relative for absolute positioning */
+}
+
+.logo-wrapper {
+  position: absolute;
+  top: 20px;
+  left: 20px;
+}
+
+.company-logo {
+  max-height: 50px;
+  border-radius: 100%; /* Adjust as needed */
+}
+
+.image-editor-heading {
+  margin-bottom: 20px;
+  color: #333;
+  font-size: 2em;
+  margin-top: 80px; /* Adjust as needed */
+}
+
+form {
+  margin-bottom: 30px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+form input[type="file"] {
+  padding: 10px;
+  margin-bottom: 10px;
+  font-size: 1em;
+  border: 2px solid #ddd;
+  border-radius: 5px;
+  background-color: #f0f0f0;
+  transition: border-color 0.3s ease;
+}
+
+form input[type="file"]:focus {
+  border-color: #007BFF;
+}
+
+form button {
+  padding: 10px 20px;
+  font-size: 1em;
+  border: none;
+  border-radius: 5px;
+  background-color: #007BFF;
+  color: white;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+form button:hover {
+  background-color: #0056b3;
+}
+
+#imageEditingSection {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  flex-wrap: wrap;
+}
+
+.image-wrapper {
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  width: 100%;
+  max-width: 1200px;
+  margin-bottom: 20px;
+}
+
+#imageContainer, #preview {
+  width: calc(50% - 20px);
+  padding: 20px;
+  border: 2px solid #e0e0e0;
+  border-radius: 10px;
+  background-color: #fff;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+#imageContainer img, #preview img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+  margin: 0 auto;
+  border-radius: 10px;
+  max-height: 400px;
+}
+
+#preview .preview-heading {
+  position: absolute;
+  top: 10px; /* Adjust as needed */
+  left: 20px; /* Adjust as needed */
+  color: #333;
+  margin-top: 290px;
+  margin-left: 590px;
+  font-size: 1.2em;
+  background-color: #fff;
+  padding: 5px 10px;
+  border-radius: 5px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+#controls {
+  width: 100%;
+  max-width: 600px;
+  padding: 20px;
+  border: 2px solid #e0e0e0;
+  border-radius: 10px;
+  background-color: #fff;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  display: flex;
+  flex-direction: column;
+  align-items: stretch;
+  margin-left: 300px;
+}
+
+#controls label {
+  margin-top: 15px;
+  font-weight: bold;
+  color: #555;
+  text-align: left;
+}
+
+#controls input[type="range"] {
+  width: 100%;
+  cursor: pointer;
+}
+
+#saveButton {
+  margin-top: 20px;
+  padding: 10px 20px;
+  font-size: 1em;
+  border: none;
+  border-radius: 5px;
+  background-color: #28a745;
+  color: white;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+#saveButton:hover {
+  background-color: #218838;
+}
+
+@media (max-width: 768px) {
+  .image-wrapper {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  #imageContainer, #preview {
+    width: 95%;
+    margin: 10px 0;
+  }
+
+  #controls {
+    width: 100%;
+    max-width: 100%;
+    margin: 10px 0;
+  }
+}
